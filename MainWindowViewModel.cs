@@ -231,24 +231,28 @@ namespace Project
             IsOk = true;
             IsInit = false;
 
-            for (int i = 0; i < PatientList.Count; i++)
-            {
-                if (SearchNameNumber == PatientList.ElementAt(i).PatientName ||
-                    SearchNameNumber == PatientList.ElementAt(i).PatientNumber)
-                {
-                    PatientData data = new PatientData()
-                    {
-                        PatientName = PatientList.ElementAt(i).PatientName,
-                        PatientNumber = PatientList.ElementAt(i).PatientNumber,
-                        PatientGender = PatientList.ElementAt(i).PatientGender,
-                        PatientAge = PatientList.ElementAt(i).PatientAge
-                    };
-                    PatientSearchList.Add(data);
-                }
-            }
-            PatientTempList = PatientList;
-            PatientList = PatientSearchList;
-            PatientSearchList = PatientTempList;
+            PatientSearchList = new ObservableCollection<PatientData>(PatientList.Where(patient => patient.PatientName == SearchNameNumber || patient.PatientNumber == SearchNameNumber));
+
+
+
+            //for (int i = 0; i < PatientList.Count; i++)
+            //{
+            //    if (SearchNameNumber == PatientList.ElementAt(i).PatientName ||
+            //        SearchNameNumber == PatientList.ElementAt(i).PatientNumber)
+            //    {
+            //        PatientData data = new PatientData()
+            //        {
+            //            PatientName = PatientList.ElementAt(i).PatientName,
+            //            PatientNumber = PatientList.ElementAt(i).PatientNumber,
+            //            PatientGender = PatientList.ElementAt(i).PatientGender,
+            //            PatientAge = PatientList.ElementAt(i).PatientAge
+            //        };
+            //        PatientSearchList.Add(data);
+            //    }
+            //}
+            //PatientTempList = PatientList;
+            //PatientList = PatientSearchList;
+            //PatientSearchList = PatientTempList;
         }
 
 
@@ -265,12 +269,14 @@ namespace Project
             IsOk = false;
             IsInit = true;
 
-            PatientTempList = PatientSearchList;
             PatientSearchList = PatientList;
-            PatientList = PatientTempList;
+
+            //PatientTempList = PatientSearchList;
+            //PatientSearchList = PatientList;
+            //PatientList = PatientTempList;
 
 
-            PatientSearchList.Clear();
+            //PatientSearchList.Clear();
         }
 
         private void AllCheck(object p)
@@ -288,10 +294,10 @@ namespace Project
             ));
         }
 
-        bool mth(PatientData patient)
-        {
-            return patient.PatientGender == "남";
-        }
+        //bool mth(PatientData patient)
+        //{
+        //    return patient.PatientGender == "남";
+        //}
 
         private void FemaleCheck(object p)
         {
@@ -349,31 +355,35 @@ namespace Project
 
         private void AgeSelection(object p)
         {
-            for (int i = 0; i < PatientList.Count; i++)
+            PatientSearchList = new ObservableCollection<PatientData>(PatientList.Where(filterAge));
+        }
+
+        bool filterAge(PatientData patient)
+        {
+            var age = patient.PatientAge;
+            switch (SelectedAge)
             {
-
-
+                default:
+                    return false;
+                case "~10대":
+                    return age < 20;
+                case "20대":
+                    return age >= 20 && age < 30;
+                case "30대":
+                    return age >= 30 && age < 40;
+                case "40대":
+                    return age >= 40 && age < 50;
+                case "50대":
+                    return age >= 50 && age < 60;
+                case "60대":
+                    return age >= 60 && age < 70;
+                case "70대":
+                    return age >= 70 && age < 80;
+                case "80대":
+                    return age >= 80 && age < 90;
+                case "90대~":
+                    return age >= 90;
             }
-
-
-            //for (int i = 0; i < PatientList.Count; i++)
-            //{
-            //    if (PatientList.ElementAt(i).PatientAge < 20)
-            //    {
-            //        PatientData data = new PatientData()
-            //        {
-            //            PatientName = PatientList.ElementAt(i).PatientName,
-            //            PatientNumber = PatientList.ElementAt(i).PatientNumber,
-            //            PatientGender = PatientList.ElementAt(i).PatientGender,
-            //            PatientAge = PatientList.ElementAt(i).PatientAge
-            //        };
-            //        PatientSearchList.Add(data);
-            //    }
-
-            //}
-            //PatientTempList = PatientList;
-            //PatientList = PatientSearchList;
-            //PatientSearchList = PatientTempList;
         }
         #endregion
     }
