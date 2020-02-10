@@ -131,6 +131,9 @@ namespace Project
 
         private bool _FemaleRadioButton;
         public bool FemaleRadioButton { get { return _FemaleRadioButton; } set { _FemaleRadioButton = value; OnPropertyChanged("FemaleRadioButton"); } }
+
+        private string _GenderSelected;
+        public string GenderSelected { get { return _GenderSelected; } set { _GenderSelected = value; OnPropertyChanged("GenderSelected"); } }
         #endregion
 
 
@@ -281,27 +284,20 @@ namespace Project
 
         private void AllCheck(object p)
         {
+            GenderSelected = "전체";
             PatientSearchList = PatientList;
         }
 
         private void MaleCheck(object p)
         {
-            PatientSearchList = new ObservableCollection<PatientData>(PatientList.Where(
-                patient =>
-                {
-                    return patient.PatientGender == "남";
-                }
-            ));
+            GenderSelected = "남";
+            PatientSearchList = new ObservableCollection<PatientData>(PatientList.Where(patient => patient.PatientGender == "남").Where(filterAge));
         }
-
-        //bool mth(PatientData patient)
-        //{
-        //    return patient.PatientGender == "남";
-        //}
 
         private void FemaleCheck(object p)
         {
-            PatientSearchList = new ObservableCollection<PatientData>(PatientList.Where(patient => patient.PatientGender == "여"));
+            GenderSelected = "여";
+            PatientSearchList = new ObservableCollection<PatientData>(PatientList.Where(patient => patient.PatientGender == "여").Where(filterAge));
         }
 
 
@@ -353,9 +349,14 @@ namespace Project
         //}
 
 
+
         private void AgeSelection(object p)
         {
             PatientSearchList = new ObservableCollection<PatientData>(PatientList.Where(filterAge));
+     
+
+
+
         }
 
         bool filterAge(PatientData patient)
@@ -364,7 +365,7 @@ namespace Project
             switch (SelectedAge)
             {
                 default:
-                    return false;
+                    return true;
                 case "~10대":
                     return age < 20;
                 case "20대":
