@@ -41,11 +41,105 @@
     <Reference Include="EzCareTech">
       <HintPath>..\..\..\..\Desktop\인턴 컨트롤 교육(B조)\EzCareTech.dll</HintPath>
     </Reference>
+    <Reference Include="HIS.Core">
+      <HintPath>..\..\..\HIS\Deploy\Client\Core\HIS.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="HIS.Core.Global.DTO">
+      <HintPath>..\..\..\HIS\Deploy\Client\Core\HIS.Core.Global.DTO.dll</HintPath>
+    </Reference>
+    <Reference Include="HIS.UI.Base">
+      <HintPath>..\..\..\HIS\Deploy\Client\Core\HIS.UI.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="HIS.UI.Controls">
+      <HintPath>..\..\..\HIS\Deploy\Client\Core\HIS.UI.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="HIS.UI.Controls.Extension">
+      <HintPath>..\..\..\HIS\Deploy\Client\Core\HIS.UI.Controls.Extension.dll</HintPath>
+    </Reference>
+    <Reference Include="HIS.UI.Core">
+      <HintPath>..\..\..\HIS\Deploy\Client\Core\HIS.UI.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="HIS.UI.Design.Global">
+      <HintPath>..\..\..\HIS\Deploy\Client\Core\HIS.UI.Design.Global.dll</HintPath>
+    </Reference>
+    <Reference Include="HIS.UI.Design.Themes">
+      <HintPath>..\..\..\HIS\Deploy\Client\Core\HIS.UI.Design.Themes.dll</HintPath>
+    </Reference>
+    <Reference Include="HIS.UI.Utility">
+      <HintPath>..\..\..\HIS\Deploy\Client\Core\HIS.UI.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="HSF.COM.Core">
+      <HintPath>..\..\..\HIS\Deploy\Client\Core\HSF.COM.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="HSF.COM.Core.Extensions">
+      <HintPath>..\..\..\HIS\Deploy\Client\Core\HSF.COM.Core.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="HSF.Controls.WPF">
       <HintPath>..\..\..\..\Desktop\인턴 컨트롤 교육(B조)\HSF.Controls.WPF.dll</HintPath>
     </Reference>
     <Reference Include="HSF.Controls.WPF.Extension">
       <HintPath>..\..\..\..\Desktop\인턴 컨트롤 교육(B조)\HSF.Controls.WPF.Extension.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Shared.v12.1">
+      <HintPath>..\..\..\HIS\Deploy\Client\Core\Infragistics4.Shared.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.Misc.v12.1">
+      <HintPath>..\..\..\HIS\Deploy\Client\Core\Infragistics4.Win.Misc.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.v12.1">
+      <HintPath>..\..\..\HIS\Deploy\Client\Core\Infragistics4.Win.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.Controls.Editors.XamCalendar.v11.2, Version=11.2.20112.1012, Culture=neutral, PublicKeyToken=50535a6f1106be75, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\HIS\Deploy\Client\Core\InfragisticsWPF4.Controls.Editors.XamCalendar.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.Controls.Editors.XamSlider.v11.2, Version=11.2.20112.1012, Culture=neutral, PublicKeyToken=50535a6f1106be75, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\HIS\Deploy\Client\Core\InfragisticsWPF4.Controls.Editors.XamSlider.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.Controls.Menus.XamMenu.v11.2, Version=11.2.20112.1012, Culture=neutral, PublicKeyToken=50535a6f1106be75, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\HIS\Deploy\Client\Core\InfragisticsWPF4.Controls.Menus.XamMenu.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.Controls.Menus.XamTagCloud.v11.2, Version=11.2.20112.1012, Culture=neutral, PublicKeyToken=50535a6f1106be75, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\HIS\Deploy\Client\Core\InfragisticsWPF4.Controls.Menus.XamTagCloud.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.Controls.Schedules.v11.2, Version=11.2.20112.1012, Culture=neutral, PublicKeyToken=50535a6f1106be75, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\HIS\Deploy\Client\Core\InfragisticsWPF4.Controls.Schedules.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.DataPresenter.ExcelExporter.v11.2, Version=11.2.20112.1012, Culture=neutral, PublicKeyToken=50535a6f1106be75, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\HIS\Deploy\Client\Core\InfragisticsWPF4.DataPresenter.ExcelExporter.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.DataPresenter.v11.2, Version=11.2.20112.1012, Culture=neutral, PublicKeyToken=50535a6f1106be75, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\HIS\Deploy\Client\Core\InfragisticsWPF4.DataPresenter.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.DockManager.v11.2, Version=11.2.20112.1012, Culture=neutral, PublicKeyToken=50535a6f1106be75, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\HIS\Deploy\Client\Core\InfragisticsWPF4.DockManager.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.Documents.Core.v11.2, Version=11.2.20112.1012, Culture=neutral, PublicKeyToken=50535a6f1106be75, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\HIS\Deploy\Client\Core\InfragisticsWPF4.Documents.Core.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.Documents.Excel.v11.2, Version=11.2.20112.1012, Culture=neutral, PublicKeyToken=50535a6f1106be75, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\HIS\Deploy\Client\Core\InfragisticsWPF4.Documents.Excel.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.Editors.v11.2, Version=11.2.20112.1012, Culture=neutral, PublicKeyToken=50535a6f1106be75, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\HIS\Deploy\Client\Core\InfragisticsWPF4.Editors.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.Reporting.v11.2, Version=11.2.20112.1012, Culture=neutral, PublicKeyToken=50535a6f1106be75, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\HIS\Deploy\Client\Core\InfragisticsWPF4.Reporting.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsWPF4.Tiles.v11.2, Version=11.2.20112.1012, Culture=neutral, PublicKeyToken=50535a6f1106be75, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\HIS\Deploy\Client\Core\InfragisticsWPF4.Tiles.v11.2.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -89,6 +183,7 @@
   <ItemGroup>
     <Compile Include="MainWindowViewModel.cs" />
     <Compile Include="PatientData.cs" />
+    <Compile Include="PrescriptionData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

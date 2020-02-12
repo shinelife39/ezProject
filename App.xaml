@@ -4,6 +4,15 @@
              xmlns:local="clr-namespace:Project"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <SharedResourceDictionary SourcePath="/HIS.UI.Design.Themes;component/GeneralResources.xaml"
+                                          Source="/HIS.UI.Design.Themes;component/GeneralResources.xaml" />
+                <SharedResourceDictionary SourcePath="/HIS.UI.Design.Themes;component/MainResources.xaml"
+                                          Source="/HIS.UI.Design.Themes;component/MainResources.xaml" />
+                <SharedResourceDictionary SourcePath="/HIS.UI.Design.Themes;component/MCResources.xaml"
+                                          Source="/HIS.UI.Design.Themes;component/MCResources.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -21,6 +21,8 @@ namespace Project
             IsOk = false;
             IsInit = true;
 
+            PrescriptionList = new ObservableCollection<PrescriptionData>();
+
             this.AgeCollection = new List<string>() { "~10대", "20대", "30대", "40대", "50대", "60대", "70대", "80대", "90대~" };
 
             _PatientSearchList = PatientList;
@@ -81,6 +83,9 @@ namespace Project
         #endregion
 
         #region Properties
+        private ObservableCollection<PrescriptionData> _PrescriptionList;
+        public ObservableCollection<PrescriptionData> PrescriptionList { get { return _PrescriptionList; } set { _PrescriptionList = value; OnPropertyChanged("PrescriptionList"); } }
+
         private ObservableCollection<PatientData> _PatientList = new ObservableCollection<PatientData>();
         public ObservableCollection<PatientData> PatientList { get { return _PatientList; } set { _PatientList = value; OnPropertyChanged("PatientList"); } }
 
@@ -89,6 +94,15 @@ namespace Project
 
         private ObservableCollection<PatientData> _PatientTempList = new ObservableCollection<PatientData>();
         public ObservableCollection<PatientData> PatientTempList { get { return _PatientTempList; } set { _PatientTempList = value; OnPropertyChanged("PatientTempList"); } }
+
+        private string _PatientNameTextBlock;
+        public string PatientNameTextBlock { get { return _PatientNameTextBlock; } set { _PatientNameTextBlock = value; OnPropertyChanged("PatientNameTextBlock"); } }
+
+        private Object _GenderColor;
+        public Object GenderColor { get { return _GenderColor; } set { _GenderColor = value; OnPropertyChanged("GenderColor"); } }
+
+        private int _PrescriptionNumber;
+        public int PrescriptionNumber { get { return _PrescriptionNumber; } set { _PrescriptionNumber = value; OnPropertyChanged("PrescriptionNumber"); } }
 
         private List<string> _AgeCollection;
         public List<string> AgeCollection { get { return _AgeCollection; } set { _AgeCollection = value; OnPropertyChanged("AgeCollection"); } }
@@ -207,6 +221,18 @@ namespace Project
             }
         }
 
+        private ICommand _OpenPatientCommand;
+        public ICommand OpenPatientCommand
+        {
+            get
+            {
+                if (_OpenPatientCommand == null)
+                    _OpenPatientCommand = new RelayCommand(p => this.OpenPatient(p));
+                return _OpenPatientCommand;
+            }
+        }
+
+       
 
 
         #endregion
@@ -224,9 +250,19 @@ namespace Project
                     PatientGender = (i % 2 == 0) ? "여" : "남",
                     PatientAge = (i + 1) * 10,
                 };
+
+                PrescriptionData a = new PrescriptionData()
+                {
+                    PrescriptionNumber = i+1
+                };
                 PatientList.Add(data);
+                PrescriptionList.Add(a);
+
             }
 
+
+
+           
         }
 
         private void Search(object p)
@@ -353,10 +389,6 @@ namespace Project
         private void AgeSelection(object p)
         {
             PatientSearchList = new ObservableCollection<PatientData>(PatientList.Where(filterAge));
-     
-
-
-
         }
 
         bool filterAge(PatientData patient)
@@ -385,6 +417,15 @@ namespace Project
                 case "90대~":
                     return age >= 90;
             }
+        }
+
+        private void OpenPatient(object p)
+        {
+            PatientData t = PatientList.ElementAt((int)p);
+            PatientName = t.PatientName;
+            PatientGender = t.PatientGender;
+
+
         }
         #endregion
     }
