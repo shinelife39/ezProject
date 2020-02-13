@@ -29,5 +29,10 @@ namespace Project
         {
 
         }
+
+        private void PrescriptionDataBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
